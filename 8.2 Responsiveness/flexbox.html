@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox</title>
+  <style>
+    .container{
+      display: flex;
+    }
+
+    .class{
+      background-color: aquamarine;
+      height: 100px;
+      border: 2px solid black;
+      flex: 1;
+      /* didvides the length equally (100px) among all contents */
+      margin: 2px;
+    }
+
+    .first{
+      flex: 2;
+      /* doubles the width for 1st box */
+    }
+    
+    .second{
+      flex: 0.5;
+      /* half the width for 1st box */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="first class"></div>
+    <div class="second class"></div>
+    <div class="class"></div>
+    <div class="class"></div>
+  </div>
+</body>
+</html>

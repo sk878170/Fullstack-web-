@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESPOSIVE GRID</title>
+
+    <style>
+        .container{
+            display: grid;
+            /* turns display into grid */
+            grid-template-columns: 1fr 1fr;
+            /* divides the content into 2 columns with equal fraction */
+            grid-template-rows: 100px 200px 200px;
+            /* 1st row will be 100px and 2nd & 3rd will be 200px */
+        }
+
+        .firstcard{
+            background-color: blue;
+            grid-column: span 2;
+            /* create a div which spans 2 columns */
+            border: 2px solid black;
+            margin: 2px;
+        }
+
+        .card{
+            background-color: chartreuse;
+            border: 2px solid black;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="firstcard"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+</body>
+</html>

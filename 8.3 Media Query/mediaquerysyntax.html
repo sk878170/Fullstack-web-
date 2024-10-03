@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* any-hover */
+        @media (any-hover: hover) {
+            a:hover {
+                background-color: red;
+                color: white;
+            }
+        }
+
+        /* any pointer */
+        .test {
+            background-color: gray;
+        }
+
+        /* If you are using fine-grained pointer like mouse/touchpad */
+        @media (any-pointer: fine) {
+            input[type="checkbox"] {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 15px;
+                height: 15px;
+                border: 1px solid blue;
+            }
+        }
+
+        /* If you are using coarse grained pointer like touchscreen */
+        @media (any-pointer: coarse) {
+            input[type="checkbox"] {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 30px;
+                height: 30px;
+                border: 2px solid red;
+            }
+        }
+        /* ASPECT RATION */
+        @media (min-aspect-ratio: 8/5) {
+            .ar {
+                background-color: red; /* Minimum aspect ratio */
+            }
+        }
+
+        @media (min-aspect-ratio: 3/2) {
+            .ar {
+                background-color: yellow; /* Maximum aspect ratio */
+            }
+        }
+
+        @media (min-aspect-ratio: 1/1) {
+            .ar {
+                background-color: green; 
+                /*  Exact aspect ratio, put it at the bottom to avoid override */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.youtube.com">YOUTUBE</a><br>
+    <input type="checkbox" id="test" name="yes" value="tick">
+    <label for="test">LOOK AT ME!</label><br>
+    <div class="ar">Watch me as you change the size of screen (aspect ration)</div>
+</body>
+
+</html>
