@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            gap: 10px;
+            border: 5px solid black;
+        }
+        
+        .container>div{
+            background-color: darksalmon;
+            margin: 5px;
+            border: 5px solid rgb(101, 206, 21);
+            /* untill now on shrinking the screen 
+            the elements shrink untill last possible width due to flex */
+
+
+            width: 100px;
+            /* according to priority list if content width is not set, we can set the width manually */
+
+            flex-basis: 200px;
+            /* now the wisth set manually will be ignored as it comes before priority than flex-basis */
+
+
+
+            max-width: 50px;
+            /* being on top priority, it is always followed first ignoring rest values */
+            /* width is for rows and height is for columns (change flex-direction to column) */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><p>Home</p></div>
+        <div><p>contact us</p></div>
+        <div><p>About us</p></div>
+        <div><p>The best programmer in the world</p></div>
+        <!-- The last possible shrink depends on longest word in each p -->
+        <!-- for eg, in last p the longest word in programmer, so it will shrinking such that the word fits in box  -->
+    </div>
+</body>
+</html>
