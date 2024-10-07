@@ -60,6 +60,24 @@
                 /*  Exact aspect ratio, put it at the bottom to avoid override */
             }
         }
+
+        /* DISPLAY MODE */
+        .display{
+            height: 100px;
+            width: 500px;
+            background-color: aqua;
+            text-align: center;
+        }
+
+        @media (display-mode: fullscreen){
+            .display{
+                margin: 0px;
+                border: 10px solid black;
+            }
+        }
+
+        
+
     </style>
 </head>
 
@@ -68,6 +86,7 @@
     <input type="checkbox" id="test" name="yes" value="tick">
     <label for="test">LOOK AT ME!</label><br>
     <div class="ar">Watch me as you change the size of screen (aspect ration)</div>
+    <div class="display">DISPLAY MODE TEST</div>
 </body>
 
 </html>
