@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-container{
+            height:200px;
+            width: 300px;
+            background-color: yellow;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        .box-container:first-child{
+            background-color: red;
+            /* position: relative; 
+            top: 50px
+            left: 50px; */
+
+            position: absolute;
+            /* As position is absolute, The red part overlaps the 2nd child */
+            
+            /* z-index: -2; */
+
+            /* On assigning z index to -2, it goes behind 
+            as z index of yellow part is 0  */
+
+        }
+
+        .box-container:nth-child(4){
+            background-color: blue;
+            /* position: fixed; */
+            /* On scrolling up or down this 4th child wont move */
+            top: 30%;
+            left: 45%;
+            position: sticky;
+            /* The box goes up and down but only upto a limit */
+            
+        }
+
+        .a, .b{
+            height: 100px;
+            width: 200px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        .a{
+            background-image: url('..\10.3 Mondrian Project\goal.png');
+            background-size: 70px 50px;
+            background-repeat: no-repeat;
+            /* To prevent from bg image repition inside div*/
+            background-position: right bottom;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-container"></div>
+    <div class="box-container"></div>
+    <div class="box-container"></div>
+    <div class="box-container"></div>
+    <div class="box-container"></div>
+    <div class="box-container"></div>
+    <div class="box-container"></div>
+    <div class="box-container"></div>
+
+    <div class="container">
+        <div class="a"></div>
+        <div class="b"></div>
+    </div>
+
+    
+</body>
+</html>
